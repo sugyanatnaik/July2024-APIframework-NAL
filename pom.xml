@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>July2024APIFWSeries</groupId>
-	<artifactId>July2024APIFWSeries</artifactId>
+	<groupId>July2024-APIframework-NAL</groupId>
+	<artifactId>July2024-APIframework-NAL</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>July2024APIFWSeries</name>
@@ -59,11 +59,16 @@
 			<version>2.17.2</version>
 		</dependency>
 
+<!--
+If you get this error then update LomBok to the latest version
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project July2024-APIframework-NAL: Fatal error compiling: java.lang.NoSuchFieldError: Class com.sun.tools.javac.tree.JCTree$JCImport does not have member field 'com.sun.tools.javac.tree.JCTree qualid' -> [Help 1]
+-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.18</version>
+			<version>1.18.34</version>
 		</dependency>
+
 
 
 		<dependency>
@@ -132,8 +137,8 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile> -->
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						 <suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
+						<!--						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
